@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-// ------ 직교 카메라 (멀리 있든 가까이 있든 크기가 똑같이 보이는 기법-위에서 바라보는 느낌) ------
+// ------ window 사이즈가 변경될때 자동으로 같이 변경되게, 디스플레이 pixel 설정 ------
 export default function example() {
   // 동적으로 캔버스 조립하기
   // const renderer = new THREE.WebGLRenderer();
@@ -15,26 +15,25 @@ export default function example() {
   });
   renderer.setSize(window.innerWidth, window.innerHeight);
 
+  // 해당 디스플레이 기기의 pixel의 값을 나타내는 메소드
+  // console.log(window.devicePixelRatio);
+
+  renderer.setPixelRatio(window.devicePixelRatio > 1 ? 2 : 1);
+
   // scene 생성
   const scene = new THREE.Scene();
 
-  // Orthographic camera(직교 카메라) 생성
-  // Mesh가 가까이 있든 멀리 있든 크기가 같아보이는 기법
-  // 예를 들어 하늘에서 보는거와 같은 느낌의 카메라
-  const camera = new THREE.OrthographicCamera(
-    -(window.innerWidth / window.innerHeight), //left
-    window.innerWidth / window.innerHeight, //right
-    1, //top
-    -1, //bottom
+  // camera 생성 (near와 far사이에 있어야 보인다.)
+  const camera = new THREE.PerspectiveCamera(
+    75, //시야각
+    window.innerWidth / window.innerHeight, //종횡비
     0.1, //near
     1000 //far
   );
+  // camera position을 설정하여 camera의 위치를 설정한다. (보통 앞으로 빼준다.)
   camera.position.x = 1;
   camera.position.y = 2;
   camera.position.z = 5;
-  camera.lookAt(0, 0, 0); //camera가 원점을 바라보게 설정한 코드
-  camera.zoom = 0.5; //zoomin, zoomout 설정 가능한 메소드
-  camera.updateProjectionMatrix(); //camera 렌더에 대한 속성을 바꿨으면 이 메소드를 호출해줘야한다.
   scene.add(camera);
 
   // mesh 생성 (무대 위에 올려져 있는 객체 하나하나라고 보면 된다.)
@@ -49,4 +48,16 @@ export default function example() {
 
   // 최종적으로 mesh를 무대 위에 올릴라면 renderer로 그려줘야한다.
   renderer.render(scene, camera);
+
+  function setSize() {
+    // 창사이즈가 변하면 camera 종횡비가 변하기 때문에 다시 설정
+    camera.aspect = window.innerWidth / window.innerHeight;
+    // camera 투영에 관련된 값이 변화가 있을 때 써줘야하는 메소드
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.render(scene, camera);
+  }
+
+  // 창사이즈가 변경될때 컨텐츠도 따라 변경될 수 있게하는 이벤트
+  window.addEventListener("resize", setSize);
 }
