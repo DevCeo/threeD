@@ -7,6 +7,8 @@
 // import example from "./example/ex7";
 // import example from "./example/ex8";
 // import example from "./example/ex9";
-import example from "./example/ex10";
+// import example from "./example/ex10";
+// import example from "./example/ex11";
+import example from "./example/ex12";
 
 example();
