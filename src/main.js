@@ -18,6 +18,7 @@
 // import example from "./example/ex18";
 // import example from "./example/ex19";
 
-import example from "./geometry/geometry1";
+// import example from "./geometry/geometry1";
+import example from "./geometry/geometry2";
 
 example();
