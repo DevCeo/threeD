@@ -10,6 +10,14 @@
 // import example from "./example/ex10";
 // import example from "./example/ex11";
 // import example from "./example/ex12";
-import example from "./example/ex13";
+// import example from "./example/ex13";
+// import example from "./example/ex14";
+// import example from "./example/ex15";
+// import example from "./example/ex16";
+// import example from "./example/ex17";
+// import example from "./example/ex18";
+// import example from "./example/ex19";
+
+import example from "./geometry/geometry1";
 
 example();
