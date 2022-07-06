@@ -1,3 +1,4 @@
+// example folder
 // import example from "./example/ex1";
 // import example from "./example/ex2";
 // import example from "./example/ex3";
@@ -18,7 +19,17 @@
 // import example from "./example/ex18";
 // import example from "./example/ex19";
 
+// geometry folder
 // import example from "./geometry/geometry1";
-import example from "./geometry/geometry2";
+// import example from "./geometry/geometry2";
+
+// camera folder
+// import example from "./camera/camera1";
+// import example from "./camera/camera2";
+// import example from "./camera/camera3";
+// import example from "./camera/camera4";
+// import example from "./camera/camera5";
+// import example from "./camera/camera6";
+import example from "./camera/camera7";
 
 example();
