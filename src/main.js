@@ -48,6 +48,15 @@
 // import example from "./material/material13";
 // import example from "./material/material14";
 // import example from "./material/material15";
-import example from "./material/material16";
+// import example from "./material/material16";
+
+// light folder
+// import example from "./light/light1";
+// import example from "./light/light2";
+// import example from "./light/light3";
+// import example from "./light/light4";
+// import example from "./light/light5";
+// import example from "./light/light6";
+import example from "./light/light7";
 
 example();
