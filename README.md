@@ -1,4 +1,4 @@
 # threeD
 
 3D
-javascript 문법으로 강의 듣는거 배우면서 연습
+강의를 들으면서 배우는 Three.js

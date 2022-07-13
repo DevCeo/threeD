@@ -30,6 +30,24 @@
 // import example from "./camera/camera4";
 // import example from "./camera/camera5";
 // import example from "./camera/camera6";
-import example from "./camera/camera7";
+// import example from "./camera/camera7";
+
+// material folder
+// import example from "./material/material1";
+// import example from "./material/material2";
+// import example from "./material/material3";
+// import example from "./material/material4";
+// import example from "./material/material5";
+// import example from "./material/material6";
+// import example from "./material/material7";
+// import example from "./material/material8";
+// import example from "./material/material9";
+// import example from "./material/material10";
+// import example from "./material/material11";
+// import example from "./material/material12";
+// import example from "./material/material13";
+// import example from "./material/material14";
+// import example from "./material/material15";
+import example from "./material/material16";
 
 example();
