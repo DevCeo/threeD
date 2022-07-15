@@ -57,6 +57,9 @@
 // import example from "./light/light4";
 // import example from "./light/light5";
 // import example from "./light/light6";
-import example from "./light/light7";
+// import example from "./light/light7";
+
+// raycaster folder
+import example from "./raycaster/ex02";
 
 example();
